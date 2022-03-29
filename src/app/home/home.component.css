@@ -1,0 +1,10 @@
+@media (min-width: 768px){
+    .col-md-9 {
+        flex: 0 0 100%;
+        max-width: 95%;
+    }
+    .img-fluid1{
+        height: 300px;
+        width: 200px;
+    }
+    }

@@ -16,6 +16,8 @@ import { EditAddressComponent } from './edit-address/edit-address.component';
 import { WatchesComponent } from './watches/watches.component';
 import { Shop2Component } from './shop2/shop2.component';
 import { Shop3Component } from './shop3/shop3.component';
+import { HandBagsComponent } from './hand-bags/hand-bags.component';
+import { ShoesComponent } from './shoes/shoes.component';
 const routes: Routes = [
   { path:"", component:HomeComponent },
   { path:"product-single", component:ProductsingleComponent },
@@ -33,7 +35,8 @@ const routes: Routes = [
   { path:"watches", component:WatchesComponent },
   { path:"shop2", component:Shop2Component },
   { path:"shop3", component:Shop3Component },
-  
+  { path:"hand-bag", component:HandBagsComponent},
+  { path:"shoes", component:ShoesComponent},  
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

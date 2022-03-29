@@ -2211,9 +2211,3 @@ table.shop_table_responsive {
   height: 300px;
 }
 
-@media (min-width: 768px){
-  .col-md-9 {
-      flex: 0 0 100%;
-      max-width: 100%;
-  }
-  }
