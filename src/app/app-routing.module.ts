@@ -18,6 +18,13 @@ import { Shop2Component } from './shop2/shop2.component';
 import { Shop3Component } from './shop3/shop3.component';
 import { HandBagsComponent } from './hand-bags/hand-bags.component';
 import { ShoesComponent } from './shoes/shoes.component';
+import {ResetPasswordComponent} from './reset-password/reset-password.component';
+import { AdminPanelComponent } from './admin/admin-panel/admin-panel.component';
+import { FeedbackComponent } from './admin/feedback/feedback.component';
+import { AdminOrderComponent } from './admin/admin-order/admin-order.component';
+import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
+import { ProductComponent } from './admin/product/product.component';
+import { SellsReturnComponent } from './admin/sells-return/sells-return.component';
 const routes: Routes = [
   { path:"", component:HomeComponent },
   { path:"product-single", component:ProductsingleComponent },
@@ -37,6 +44,14 @@ const routes: Routes = [
   { path:"shop3", component:Shop3Component },
   { path:"hand-bag", component:HandBagsComponent},
   { path:"shoes", component:ShoesComponent},  
+  {path:"reset-pass",component:ResetPasswordComponent},
+  {path:"admin-panel",component:AdminPanelComponent},
+  {path:"feedback",component:FeedbackComponent},
+  {path:"admin-order",component:AdminOrderComponent},
+  {path:"admin-login",component:AdminLoginComponent},
+  {path:"product",component:ProductComponent},
+  {path:"sells-return",component:SellsReturnComponent},
+  
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

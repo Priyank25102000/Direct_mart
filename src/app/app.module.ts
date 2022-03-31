@@ -23,9 +23,14 @@ import { Shop2Component } from './shop2/shop2.component';
 import { Shop3Component } from './shop3/shop3.component';
 import { HandBagsComponent } from './hand-bags/hand-bags.component';
 import { ShoesComponent } from './shoes/shoes.component';
-import { AdminLoginComponent } from './admin-login/admin-login.component';
-import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
+import { AdminOrderComponent } from './admin/admin-order/admin-order.component';
+import { AdminPanelComponent } from './admin/admin-panel/admin-panel.component';
+import { FeedbackComponent } from './admin/feedback/feedback.component';
+import { ProductComponent } from './admin/product/product.component';
+import { SellsReturnComponent } from './admin/sells-return/sells-return.component';
 
 
 
@@ -54,8 +59,13 @@ import { ReactiveFormsModule } from '@angular/forms';
      Shop3Component,
      HandBagsComponent,
      ShoesComponent,
+     ResetPasswordComponent,
      AdminLoginComponent,
+     AdminOrderComponent,
      AdminPanelComponent,
+     FeedbackComponent,
+     ProductComponent,
+     SellsReturnComponent,
 
 
   ],
