@@ -30,13 +30,13 @@
                        <div class="row">
                           <div class="col-lg-6">
                               <div class="form-group mb-4">
-                                <label for="first_name">First Name</label>
+                                <label for="first_name">First Name<small class="text-danger">*</small></label>
                                 <input type="text" class="form-control" id="first_name" placeholder="">
                              </div>
                           </div>
                           <div class="col-lg-6">
                               <div class="form-group mb-4">
-                                <label for="last_name">Last Name</label>
+                                <label for="last_name">Last Name<small class="text-danger">*</small></label>
                                 <input type="text" class="form-control" id="last_name" placeholder="">
                              </div>
                           </div>
@@ -49,10 +49,43 @@
                      
                           <div class="col-lg-12">
                               <div class="form-group mb-4">
-                                <label for="first_name">Street Address</label>
+               
+                                      <label for="company_name">Choose Your Shipping Address<small class="text-danger">*</small></label>
+                                       <select class="form-control">
+                                         <option value="" selected disabled>Select an Option</option>
+                                         <option value="" class="input" >Current Address</option>
+                                         <option value="">Choose Other Shipping Address</option>
+                            
+                                         </select>
+                                         </div>
+                                       </div>
+
+                                 <div class="col-lg-12">
+                                <div class="form-group mb-4">
+                                <label for="first_name">Shipping Address</label>
                                 <input type="text" class="form-control" id="street" placeholder="">
                              </div>
                           </div>
+
+                          <div class="col-lg-12">
+                           <div class="form-group mb-4">
+
+                              <label for="company_name">Choose Your Billing Address<small class="text-danger">*</small></label>
+                              <select class="form-control">
+                                <option value="" selected disabled>Select an Option</option>
+                                <option value="" class="input" >Same as Shipping Address</option>
+                                <option value="">Choose Other Billing Address</option>
+                   
+                                </select>
+                                </div>
+                              </div>
+                              <div class="col-lg-12">
+                                 <div class="form-group mb-4">
+                              
+                           <label for="first_name">Billing Address</label>
+                           <input type="text" class="form-control" id="street" placeholder="">
+                        </div>
+                     </div>
                            <div class="col-lg-12">
                               <div class="form-group mb-4">
                                 <label for="first_name">Apartment, suite, unit etc. (optional) (optional)</label>
@@ -62,7 +95,7 @@
                      
                           <div class="col-lg-12">
                               <div class="form-group mb-4">
-                                <label for="company_name">City</label>
+                                <label for="company_name">City<small class="text-danger">*</small></label>
                                  <select class="form-control">
                                    <option value="">Select an Option</option>
                                    <option value="">Ahmedabad</option>
@@ -103,19 +136,19 @@
                           
                            <div class="col-lg-12">
                               <div class="form-group mb-4">
-                                <label for="first_name">Postcode / ZIP (optional)</label>
+                                <label for="first_name">Postcode / ZIP <small class="text-danger">*</small></label>
                                 <input type="text" class="form-control" id="postcode" placeholder="">
                              </div>
                           </div>
                            <div class="col-lg-12">
                               <div class="form-group mb-4">
-                                <label for="first_name">Phone </label>
+                                <label for="first_name">Phone <small class="text-danger">*</small></label>
                                 <input type="text" class="form-control" id="phone" placeholder="">
                              </div>
                           </div>
                           <div class="col-lg-12">
                               <div class="form-group mb-4">
-                                <label for="first_name">Email address </label>
+                                <label for="first_name">Email address <small class="text-danger">*</small></label>
                                 <input type="text" class="form-control" id="email" placeholder="">
                              </div>
                           </div>
@@ -201,3 +234,4 @@
         </div>
      </div>
      <app-footer></app-footer>
+
