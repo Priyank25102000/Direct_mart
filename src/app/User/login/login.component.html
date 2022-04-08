@@ -1,4 +1,8 @@
-<app-header></app-header>
+<nav class="navbar navbar-expand-lg w-100 navigation" id="navbar">
+  <div class="container" id="name">
+    <a class="navbar-brand font-weight-bold" routerLink="/">Direct-Mart</a>
+    </div>
+</nav>
 <div class="account section">
     <div class="container">
       <div class="row justify-content-center">
@@ -8,18 +12,31 @@
               <h2 class="mb-2">Login</h2>
               <p class="lead">Don’t have an account? <a routerLink="/signup">Create a free account</a></p>
             </div>
-            <form action="#">
+
+            <form action="#" [formGroup]="loginForm">
+              
               <div class="form-group mb-4">
-                <label for="#">Enter username <small class="text-danger">*</small></label>
-                <input type="text" class="form-control" placeholder="Enter Username">
+                <label for="#">Enter Email <small class="text-danger">*</small></label>
+                <input type="email" class="form-control" formControlName="email" placeholder="Enter User Email" #e1>
+                <small *ngIf="loginForm.get('email')?.invalid && email?.touched " class="text-danger">Email Is required</small>
               </div>
+
               <div class="form-group">
-                <label for="#">Enter Password <small class="text-danger">*</small></label>
                 <a class="float-right" routerLink="/forgot-password">Forget password?</a>
-                <input type="text" class="form-control" placeholder="Enter Password"> 
+                <label for="#">Enter Password <small class="text-danger">* <span>
+                  <img src="assets/images/accept.svg" *ngIf="" style="height: 20px;width: 20px;margin-left: 40px;"></span>
+                </small> </label>
+
+                <input type="password" class="form-control" formControlName="password" placeholder="Enter Password" #p1> 
+                <small *ngIf="loginForm.get('password')?.invalid && password?.touched " class="text-danger">Password Is required <span></span></small>
+              
               </div>
-              <a href="#" class="btn btn-main mt-3 btn-block">Login</a>
+              <small class="text-danger">{{msg}}</small>
+              <button (click)="check(e1.value,p1.value)" [disabled]="loginForm.invalid" class="btn btn-main mt-3 btn-block" >Login</button>
+              <br>
+             
             </form>
+
           </div>
         </div>
       </div>

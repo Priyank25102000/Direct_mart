@@ -1,0 +1,45 @@
+
+.inlineimage {
+    max-width: 470px;
+    margin-right: 8px;
+    margin-left: 10px
+}
+
+.images {
+    display: inline-block;
+    max-width: 98%;
+    height: auto;
+    width: 22%;
+    margin: 1%;
+    left: 20px;
+    text-align: center
+}
+
+.btn-success{
+    margin-bottom: 20px;
+    border-radius: 25px;
+}
+.container{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#radio2{
+    padding-left: 40px;
+    font-size: 20px;
+}
+
+#radio1{
+    font-size: 20px;
+}
+
+.payment{
+    border: 2px solid  #fb5c42;
+    background-color: rgb(243, 239, 234);
+    justify-content: center !important;
+    border-radius: 40px;
+
+}
+.crd,.brd{
+    padding-right: 1rem;
+}

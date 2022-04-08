@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 import { AdminOrderComponent } from './admin/admin-order/admin-order.component';
 import { AdminPanelComponent } from './admin/admin-panel/admin-panel.component';
 import { FeedbackComponent } from './admin/feedback/feedback.component';
@@ -16,7 +15,6 @@ import { ProductsingleComponent } from './User/productsingle/productsingle.compo
 import { CartComponent } from './User/cart/cart.component';
 import { CheckoutComponent } from './User/checkout/checkout.component';
 import { ShopComponent } from './User/shop/shop.component';
-import { DashboardComponent } from './User/dashboard/dashboard.component';
 import { OrdersComponent } from './User/orders/orders.component';
 import { LoginComponent } from './User/login/login.component';
 import { SignupComponent } from './User/signup/signup.component';
@@ -24,13 +22,14 @@ import { ForgotPasswordComponent } from './User/forgot-password/forgot-password.
 import { ProfileDetailsComponent } from './User/profile-details/profile-details.component';
 import { AddressComponent } from './User/address/address.component';
 import { EditAddressComponent } from './User/edit-address/edit-address.component';
-import { WatchesComponent } from './User/watches/watches.component';
-import { Shop2Component } from './User/shop2/shop2.component';
-import { Shop3Component } from './User/shop3/shop3.component';
-import { HandBagsComponent } from './User/hand-bags/hand-bags.component';
-import { ShoesComponent } from './User/shoes/shoes.component';
 import { ResetPasswordComponent } from './User/reset-password/reset-password.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProductCategoriesComponent } from './User/product-categories/product-categories.component';
+import { FilterPipe } from './Pipes/filter.pipe';
+import { PurchaseComponent } from './User/purchase/purchase.component';
+import { AuthGuard } from './User/login/Auth/auth1/auth.guard';
+import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
+import { AdminauthGuard } from './admin/admin-login/login-auth/adminauth.guard';
 
 
 
@@ -45,7 +44,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     CartComponent,
     CheckoutComponent,
     ShopComponent,
-    DashboardComponent,
     OrdersComponent,
     LoginComponent,
     SignupComponent,
@@ -53,11 +51,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProfileDetailsComponent,
     AddressComponent,
     EditAddressComponent,
-    WatchesComponent,
-    Shop2Component,
-    Shop3Component,
-    HandBagsComponent,
-    ShoesComponent,
     ResetPasswordComponent,
     AdminLoginComponent,
     AdminOrderComponent,
@@ -65,6 +58,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     FeedbackComponent,
     ProductComponent,
     SellsReturnComponent,
+    ProductCategoriesComponent,
+    FilterPipe,
+    PurchaseComponent,
+
 
 
   ],
@@ -72,9 +69,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     SlickCarouselModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    BrowserModule
   ],
-  providers: [],
+  providers: [AuthGuard,AdminauthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

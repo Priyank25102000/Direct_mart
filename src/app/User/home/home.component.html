@@ -40,6 +40,7 @@
     </div>
   </div>
 </ngx-slick-carousel>
+
 <section class="category section pt-3 pb-0">
   <div class="container">
     <div class="row">
@@ -49,7 +50,7 @@
           <div class="item-info">
             <p class="mb-0">Stylish Leather watch</p>
             <h4 class="mb-4">up to <strong>50% </strong>off</h4>
-            <a routerLink="/watches" class="read-more">Shop now</a>
+            <a class="read-more" (click)="Data1()">Shop now</a>
           </div>
         </div>
       </div>
@@ -59,7 +60,7 @@
           <div class="item-info">
             <p class="mb-0">Ladies hand bag</p>
             <h4 class="mb-4">up to <strong>40% </strong>off</h4>
-            <a routerLink="/hand-bag" class="read-more">Shop now</a>
+            <a  class="read-more" (click)="Data2()">Shop now</a>
           </div>
         </div>
       </div>
@@ -69,17 +70,17 @@
           <div class="item-info">
             <p class="mb-0">Trendy shoe</p>
             <h4 class="mb-4">up to <strong>50% </strong>off</h4>
-            <a routerLink="/shoes" class="read-more">Shop now</a>
+            <a  class="read-more" (click)="Data3()">Shop now</a>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
-<section class="section products-main">
-  <div class="container">
+
+
+  <div class="container" *ngIf="products">
         <div class="row justify-content-center">
-            <div class="col-lg-8">
+            <div class="col-lg-8" id="p-title">
                 <div class="title text-center">
                     <h2>New arrivals</h2>
                     <p>The best Online sales to shop these weekend</p>
@@ -88,264 +89,147 @@
         </div>
 
 
-    <div class="row">
-      <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5" >
-          <div class="product">
+    <div class="row"  >
+      <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5" *ngFor="let product of productList" >
+          <div class="product" >
             <div class="product-wrap">
-                <a routerLink="/product-single"><img class="img-fluid1 w-100 mb-3 img-first" src="assets/images/img1.jpg" alt="product-img" /></a>
-                <!-- <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-second" src="assets/images/men-1.jpg" alt="product-img" /></a> -->
+                <img routerLink="/product-single" img class="img-fluid1 w-100 mb-3 img-first" src={{product.imageUrl}} alt="product-img">
             </div>
 
-            <span class="onsale">Sale</span>
+            <!-- <span class="onsale">Sale</span> -->
             <div class="product-hover-overlay">
                 <a href="#"><i class="tf-ion-android-cart"></i></a>
                 <a href="#"><i class="tf-ion-ios-heart"></i></a>
               </div>
 
             <div class="product-info">
-                <h2 class="product-title h5 mb-0"><a href="#">Floral Kirby</a></h2>
+                <h2 class="product-title h5 mb-0"><a href="#">{{product.name}}</a></h2>
                 <span class="price">
-                    &#8377; 329.10
+                   {{product.price | currency:'INR'}}
                 </span>
             </div>
         </div>
       </div>
-
-      <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5">
-        <div class="product">
-            <div class="product-wrap">
-                <a routerLink="/product-single"><img class="img-fluid1 w-100 mb-3 img-first" src="assets/images/shoes8.png" alt="product-img" /></a>
-                <!-- <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-second" src="assets/images/444.jpg" alt="product-img" /></a> -->
-            </div>
-
-            <div class="product-hover-overlay">
-                <a href="#"><i class="tf-ion-android-cart"></i></a>
-                <a href="#"><i class="tf-ion-ios-heart"></i></a>
-              </div>
-              
-            <div class="product-info">
-                <h2 class="product-title h5 mb-0"><a href="#">Open knit switer</a></h2>
-                <span class="price">
-                  &#8377; 29.10
-                </span>
-            </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5" >
-        <div class="product">
-            <div class="product-wrap">
-                <a routerLink="/product-single"><img class="img-fluid1 w-100 mb-3 img-first" src="assets/images/watch-1.jpeg" alt="product-img" /></a>
-                <!-- <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-second" src="assets/images/322.jpg" alt="product-img" /></a> -->
-            </div>
-
-            <span class="onsale">Sale</span>
-            <div class="product-hover-overlay">
-                <a href="#"><i class="tf-ion-android-cart"></i></a>
-                <a href="#"><i class="tf-ion-ios-heart"></i></a>
-              </div>
-
-            <div class="product-info">
-                <h2 class="product-title h5 mb-0"><a href="#">Official trendy</a></h2>
-                <span class="price">
-                  &#8377; 350.00 – &#8377; 355.00
-                </span>
-            </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5">
-        <div class="product">
-            <div class="product-wrap">
-                <a routerLink="/product-single"><img class="img-fluid1 w-100 mb-3 img-first" src="assets/images/shoes4.jpeg" alt="product-img" /></a>
-                <!-- <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-second" src="assets/images/111.jpg" alt="product-img" /></a> -->
-            </div>
-
-            <div class="product-hover-overlay">
-                <a href="#"><i class="tf-ion-android-cart"></i></a>
-                <a href="#"><i class="tf-ion-ios-heart"></i></a>
-              </div>
-
-            <div class="product-info">
-                <h2 class="product-title h5 mb-0"><a href="#">Frock short</a></h2>
-                <span class="price">
-                  &#8377; 249
-                </span>
-            </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5">
-        <div class="product">
-            <div class="product-wrap">
-                <a href="#"><img class="img-fluid1 w-100 mb-3 img-first" src="assets/images/watch4.jpg" alt="product-img" /></a>
-                <!-- <a href="#"><img class="img-fluid w-100 mb-3 img-second" src="assets/images/444.jpg" alt="product-img" /></a> -->
-            </div>
-
-            <div class="product-hover-overlay">
-                <a href="#"><i class="tf-ion-android-cart"></i></a>
-                <a href="#"><i class="tf-ion-ios-heart"></i></a>
-              </div>
-
-            <div class="product-info">
-                <h2 class="product-title h5 mb-0"><a href="#">Sleeve dress</a></h2>
-                <span class="price">
-                  &#8377; 59.10
-                </span>
-            </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5 " >
-        <div class="product">
-            <div class="product-wrap">
-                <a href="#"><img class="img-fluid1 w-100 mb-3 img-first" src="assets/images/sh3.jpg" alt="product-img" /></a>
-                <!-- <a href="#"><img class="img-fluid w-100 mb-3 img-second" src="assets/images/322.jpg" alt="product-img" /></a> -->
-            </div>
-
-            <div class="product-hover-overlay">
-                <a href="#"><i class="tf-ion-android-cart"></i></a>
-                <a href="#"><i class="tf-ion-ios-heart"></i></a>
-              </div>
-
-            <div class="product-info">
-                <h2 class="product-title h5 mb-0"><a href="#">Sleeve linen shirt</a></h2>
-                <span class="price">
-                  &#8377; 50.10
-                </span>
-            </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5" >
-        <div class="product">
-            <div class="product-wrap">
-                <a href="#"><img class="img-fluid1 w-100 mb-3 img-first" src="assets/images/img8.jpg" alt="product-img" /></a>
-                <!-- <a href="#"><img class="img-fluid w-100 mb-3 img-second" src="assets/images/222.jpg" alt="product-img" /></a> -->
-            </div>
-
-            <div class="product-hover-overlay">
-                <a href="#"><i class="tf-ion-android-cart"></i></a>
-                <a href="#"><i class="tf-ion-ios-heart"></i></a>
-              </div>
-
-            <div class="product-info">
-                <h2 class="product-title h5 mb-0"><a href="#">Stylish dress</a></h2>
-                <span class="price">
-                  &#8377; 99.00
-                </span>
-            </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5">
-        <div class="product">
-            <div class="product-wrap">
-                <a href="#"><img class="img-fluid1 w-100 mb-3 img-first" src="assets/images/men-2.jpg" alt="product-img" /></a>
-                <!-- <a href="#"><img class="img-fluid w-100 mb-3 img-second" src="assets/images/444.jpg" alt="product-img" /></a> -->
-            </div>
-
-            <div class="product-hover-overlay">
-                <a href="#"><i class="tf-ion-android-cart"></i></a>
-                <a href="#"><i class="tf-ion-ios-heart"></i></a>
-              </div>
-
-            <div class="product-info">
-                <h2 class="product-title h5 mb-0"><a href="#">Sleeve dress</a></h2>
-                <span class="price">
-                  &#8377; 59.10
-                </span>
-            </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5 " >
-        <div class="product">
-            <div class="product-wrap">
-                <a href="#"><img class="img-fluid1 w-100 mb-3 img-first" src="assets/images/shoes2.jpg" alt="product-img" /></a>
-                <!-- <a href="#"><img class="img-fluid w-100 mb-3 img-second" src="assets/images/444.jpg" alt="product-img" /></a> -->
-            </div>
-
-            <div class="product-hover-overlay">
-                <a href="#"><i class="tf-ion-android-cart"></i></a>
-                <a href="#"><i class="tf-ion-ios-heart"></i></a>
-              </div>
-
-            <div class="product-info">
-                <h2 class="product-title h5 mb-0"><a href="#">Body suite</a></h2>
-                <span class="price">
-                  &#8377; 329.10
-                </span>
-            </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5 " >
-        <div class="product">
-            <div class="product-wrap">
-                <a href="#"><img class="img-fluid1 w-100 mb-3 img-first" src="assets/images/watch-3.png" alt="product-img" /></a>
-                <!-- <a href="#"><img class="img-fluid w-100 mb-3 img-second" src="assets/images/444.jpg" alt="product-img" /></a> -->
-            </div>
-
-            <div class="product-hover-overlay">
-                <a href="#"><i class="tf-ion-android-cart"></i></a>
-                <a href="#"><i class="tf-ion-ios-heart"></i></a>
-              </div>
-
-            <div class="product-info">
-                <h2 class="product-title h5 mb-0"><a href="#">Body suite</a></h2>
-                <span class="price">
-                  &#8377; 329.10
-                </span>
-            </div>
-        </div>
-      </div>
-
-     <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5 " >
-        <div class="product">
-            <div class="product-wrap">
-                <a href="#"><img class="img-fluid1 w-100 mb-3 img-first" src="assets/images/img3.jpg" alt="product-img" /></a>
-                <!-- <a href="#"><img class="img-fluid w-100 mb-3 img-second" src="assets/images/322.jpg" alt="product-img" /></a> -->
-            </div>
-
-            <div class="product-hover-overlay">
-                <a href="#"><i class="tf-ion-android-cart"></i></a>
-                <a href="#"><i class="tf-ion-ios-heart"></i></a>
-              </div>
-
-            <div class="product-info">
-                <h2 class="product-title h5 mb-0"><a href="#">Sleeve linen shirt</a></h2>
-                <span class="price">
-                  &#8377; 50.10
-                </span>
-            </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5">
-        <div class="product">
-            <div class="product-wrap">
-                <a href="#"><img class="img-fluid1 w-100 mb-3 img-first" src="assets/images/img2.jpg" alt="product-img" /></a>
-                <!-- <a href="#"><img class="img-fluid w-100 mb-3 img-second" src="assets/images/444.jpg" alt="product-img" /></a> -->
-            </div>
-
-            <div class="product-hover-overlay">
-                <a href="#"><i class="tf-ion-android-cart"></i></a>
-                <a href="#"><i class="tf-ion-ios-heart"></i></a>
-              </div>
-
-            <div class="product-info">
-                <h2 class="product-title h5 mb-0"><a href="#">Sleeve dress</a></h2>
-                <span class="price">
-                  &#8377; 59.10
-                </span>
-            </div>
-        </div>
-      </div>
-      
     </div>
+    
   </div>
+
+
+  <section class="section products-main" >
+    <div class="container" *ngIf="watches">
+      <div class="row justify-content-center">
+          <div class="col-lg-8" id="w-title">
+              <div class="w-title text-center">
+                  <h2>Watches</h2>
+                  <p>The best Online sales to shop these weekend</p>
+              </div>
+          </div>
+      </div>
+    <div class="container">
+<div class="row" >
+    <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5" *ngFor="let watches of watchesList">
+        <div class="product">
+            <div class="product-wrap">
+                <a href="#"><img class="img-fluid w-100 mb-3 watch-images" src={{watches.imageUrl}} alt="product-img" /></a>
+            </div>
+
+            <div class="product-hover-overlay">
+                <a href="#"><i class="tf-ion-android-cart"></i></a>
+                <a href="#"><i class="tf-ion-ios-heart"></i></a>
+              </div>
+
+            <div class="product-info">
+                <h2 class="product-title h5 mb-0"><a href="#">{{watches.name}}</a></h2>
+                <span class="price">
+                    &#8377; {{watches.price}}
+                </span>
+            </div>
+        </div>
+      </div>
+</div>
+    </div>
+    </div>
+
+
+
+    <section class="section products-main" >
+      <div class="container" *ngIf="bags">
+        <div class="row justify-content-center">
+            <div class="col-lg-8" id="b-title">
+                <div class="b-title text-center">
+                    <h2>Bags</h2>
+                    <p>The best Online sales to shop these weekend</p>
+                </div>
+            </div>
+        </div>
+      <div class="container">
+  <div class="row" >
+      <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5" *ngFor="let bags of bagsList">
+          <div class="product">
+              <div class="product-wrap">
+                  <a href="#"><img class="img-fluid w-100 mb-3 watch-images" src={{bags.imageUrl}} alt="product-img" /></a>
+              </div>
+  
+              <div class="product-hover-overlay">
+                  <a href="#"><i class="tf-ion-android-cart"></i></a>
+                  <a href="#"><i class="tf-ion-ios-heart"></i></a>
+                </div>
+  
+              <div class="product-info">
+                  <h2 class="product-title h5 mb-0"><a href="#">{{bags.name}}</a></h2>
+                  <span class="price">
+                      &#8377; {{bags.price}}
+                  </span>
+              </div>
+          </div>
+        </div>
+  </div>
+      </div>
+      </div>
+
+
+    <section class="section products-main" >
+      <div class="container" *ngIf="shoes">
+        <div class="row justify-content-center">
+            <div class="col-lg-8" id="s-title">
+                <div class="s-title text-center">
+                    <h2>Shoes</h2>
+                    <p>The best Online sales to shop these weekend</p>
+                </div>
+            </div>
+        </div>
+      <div class="container">
+  <div class="row" >
+      <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5" *ngFor="let shoes of shoesList">
+          <div class="product">
+              <div class="product-wrap">
+                  <a href="#"><img class="img-fluid w-100 mb-3 watch-images" src={{shoes.imageUrl}} alt="product-img" /></a>
+              </div>
+  
+              <div class="product-hover-overlay">
+                  <a href="#"><i class="tf-ion-android-cart"></i></a>
+                  <a href="#"><i class="tf-ion-ios-heart"></i></a>
+                </div>
+  
+              <div class="product-info">
+                  <h2 class="product-title h5 mb-0"><a href="#">{{shoes.name}}</a></h2>
+                  <span class="price">
+                      &#8377; {{shoes.price}}
+                  </span>
+              </div>
+          </div>
+        </div>
+  </div>
+      </div>
+      </div>
+  
+
 </section>
+    </section>
+
+
+</section>
+
   <!-- /portfolio -->
   <section class="ads section">
   <div class="container">

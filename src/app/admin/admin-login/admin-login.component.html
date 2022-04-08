@@ -1,22 +1,28 @@
 <div class="account section">
-    <div class="container">
+    <div class="container mainC">
       <div class="row justify-content-center">
-        <div class="col-lg-6">
+        <div class="col-lg-6 inner">
           <div class="login-form border p-5">
             <div class="text-center heading">
               <h2 class="mb-2">Admin Login</h2>
             </div>
-            <form action="#">
+            <form  [formGroup]="login">
+              
               <div class="form-group mb-4">
-                <label for="#">Enter Admin name</label>
-                <input type="text" class="form-control" placeholder="Enter Admin Name">
+                <label for="#">Enter email</label>
+                <input type="text" class="form-control" formControlName="aemail" placeholder="Enter your email" #e1>
+                <small *ngIf="login.get('aemail')?.invalid && aemail?.touched " class="text-danger">Email is required</small>
               </div>
+             
               <div class="form-group">
                 <label for="#">Enter Password</label>
                 <a class="float-right" href="">Forget password?</a>
-                <input type="text" class="form-control" placeholder="Enter Password"> 
+                <input type="password" class="form-control" formControlName="apassword" placeholder="Enter Password" #p1> 
+                <small *ngIf="login.get('apassword')?.invalid && apassword?.touched " class="text-danger">Password is required</small>
+
               </div>
-              <a href="#" class="btn btn-main mt-3 btn-block">Admin-Login</a>
+              <small class="text-danger">{{msg}}</small>
+              <button  type="button" (click)="check(e1.value,p1.value)" [disabled]="login.invalid"  class="btn btn-main mt-3 btn-block">Admin-Login</button>
 
             </form>
           </div>

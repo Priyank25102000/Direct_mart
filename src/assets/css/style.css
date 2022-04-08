@@ -803,9 +803,9 @@ a.text-primary:hover {
 }
 
 .slider .slider-caption h1 {
-  font-weight: 800;
+  font-weight: 900;
   font-family: "Poppins", sans-serif;
-  font-size: 90px;
+  font-size: 60px;
   line-height: 90px;
 }
 
@@ -904,9 +904,6 @@ a.text-primary:hover {
     font-size: 28px;
     line-height: 28px;
   }
-  .slider .slider-item {
-    background: #f9f9f9 !important;
-  }
   .slider .slider-caption {
     padding: 115px 0px;
   }
@@ -923,9 +920,6 @@ a.text-primary:hover {
     font-size: 28px;
     line-height: 38px;
   }
-  .slider .slider-item {
-    background: #f9f9f9 !important;
-  }
   .slider .slider-caption {
     padding: 115px 0px;
   }
@@ -937,16 +931,15 @@ a.text-primary:hover {
   }
 }
 
+
 @media (max-width: 768px) {
   .slider .slider-caption h1 {
     font-size: 49px;
     line-height: 57px;
   }
-  .slider .slider-item {
-    background: #f9f9f9 !important;
-  }
   .slider .slider-caption {
     padding: 115px 0px;
+    height: 500px;
   }
   .slick-control-prev, .slick-control-next {
     display: none !important;
@@ -1792,6 +1785,7 @@ a.text-primary:hover {
   background: url("../images/counter.jpg") no-repeat;
   background-size: cover;
   position: relative;
+  margin-top: -200px;
 }
 
 .ads .ads-content h2 {
@@ -2144,7 +2138,7 @@ table.shop_table_responsive {
   font-size: 0!important;
   line-height: 0!important;
   position: absolute;
-  top: 50%!important;
+  top: 78%!important;
   display: block;
   padding: 0!important;
   -webkit-transform: translate(0, -50%)!important;
@@ -2195,19 +2189,23 @@ table.shop_table_responsive {
 #everything{
   color: white;
   border: 2px solid black;
+  width: 350px;
 }
 
 #clasic-style{
   color: white;
   border: 2px solid white;
+  width: 320px;
 }
 
 #winter{
   color: white;
   border: 2px solid black;
+  width: 355px;
 }
 
 .watch-images{
   height: 300px;
 }
+
 

@@ -18,6 +18,7 @@
       </div>
     </div>
   </section>
+  
   <section class="products-shop section">
     <div class="container">
       <div class="row">
@@ -43,208 +44,145 @@
               </div>
             </div>
           </div>
-          <div class="row">
-              <div class="col-lg-4 col-12 col-md-6 col-sm-6 mb-5" >
-          <div class="product">
-        <div class="product-wrap">
-          <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-first" src="assets/images/img2.jpg" alt="product-img" /></a>
-          <!-- <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-second" src="assets/images/men-1.jpg" alt="product-img" /></a> -->
-        </div>
-        <span class="onsale">Sale</span>
-        <div class="product-hover-overlay">
-          <a href="#"><i class="tf-ion-android-cart"></i></a>
-          <a href="#"><i class="tf-ion-ios-heart"></i></a>
-            </div>
-        <div class="product-info">
-          <h2 class="product-title h5 mb-0"><a routerLink="/product-single">Floral Kirby</a></h2>
-          <span class="price">
-            &#8377; 329.10
-          </span>
-        </div>
-      </div>
-        </div>
-        <div class="col-lg-4 col-12 col-md-6 col-sm-6 mb-5">
-          <div class="product">
-        <div class="product-wrap">
-          <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-first" src="assets/images/watch15.jpeg" alt="product-img" /></a>
-          <!-- <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-second" src="assets/images/444.jpg" alt="product-img" /></a> -->
-        </div>
-        <div class="product-hover-overlay">
-          <a href="#"><i class="tf-ion-android-cart"></i></a>
-          <a href="#"><i class="tf-ion-ios-heart"></i></a>
-            </div>
-            
-        <div class="product-info">
-          <h2 class="product-title h5 mb-0"><a routerLink="/product-single">Open knit switer</a></h2>
-          <span class="price">
-            &#8377; 29.10
-          </span>
-        </div>
-      </div>
-        </div>
-        
-        <div class="col-lg-4 col-12 col-md-6 col-sm-6 mb-5" >
-          <div class="product">
-        <div class="product-wrap">
-          <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-first" src="assets/images/shoes11.jpeg" alt="product-img" /></a>
-          <!-- <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-second" src="assets/images/322.jpg" alt="product-img" /></a> -->
-        </div>
-        <span class="onsale">Sale</span>
-        <div class="product-hover-overlay">
-          <a href="#"><i class="tf-ion-android-cart"></i></a>
-          <a href="#"><i class="tf-ion-ios-heart"></i></a>
-            </div>
-        <div class="product-info">
-          <h2 class="product-title h5 mb-0"><a routerLink="/product-single">Official trendy</a></h2>
-          <span class="price">
-            &#8377; 350.00 – &#8377; 355.00
-          </span>
-        </div>
-      </div>
-        </div>
-        <div class="col-lg-4 col-12 col-md-6 col-sm-6 mb-5">
+
+        <div class="row" *ngIf="Page1">
+          <div class="col-lg-4 col-12 col-md-6 col-sm-6 mb-5" *ngFor="let product of productList1" >
       <div class="product">
-        <div class="product-wrap">
-          <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-first" src="assets/images/watch4.jpg" alt="product-img" /></a>
-          <!-- <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-second" src="assets/images/111.jpg" alt="product-img" /></a> -->
+    <div class="product-wrap">
+      <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-first" src={{product.imageUrl}} alt="product-img" /></a>
+    </div>
+    <!-- <span class="onsale">Sale</span> -->
+    <div class="product-hover-overlay">
+      <a href="#"><i class="tf-ion-android-cart"></i></a>
+      <a href="#"><i class="tf-ion-ios-heart"></i></a>
         </div>
-        <div class="product-hover-overlay">
-          <a href="#"><i class="tf-ion-android-cart"></i></a>
-          <a href="#"><i class="tf-ion-ios-heart"></i></a>
-            </div>
-        <div class="product-info">
-          <h2 class="product-title h5 mb-0"><a routerLink="/product-single">Frock short</a></h2>
-          <span class="price">
-            &#8377; 249
-          </span>
-        </div>
-      </div>
-        </div>
-        <div class="col-lg-4 col-12 col-md-6 col-sm-6 mb-5">
-          <div class="product">
-        <div class="product-wrap">
-          <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-first" src="assets/images/shoes9.webp" alt="product-img" /></a>
-          <!-- <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-second" src="assets/images/222.jpg" alt="product-img" /></a> -->
-        </div>
-        <div class="product-hover-overlay">
-          <a href="#"><i class="tf-ion-android-cart"></i></a>
-          <a href="#"><i class="tf-ion-ios-heart"></i></a>
-            </div>
-        <div class="product-info">
-          <h2 class="product-title h5 mb-0"><a routerLink="/product-single">Sleeve dress</a></h2>
-          <span class="price">
-            &#8377; 59.10
-          </span>
-        </div>
-      </div>
-        </div>
-        <div class="col-lg-4 col-12 col-md-6 col-sm-6 mb-5" >
-          <div class="product">
-        <div class="product-wrap">
-          <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-first" src="assets/images/bag12.jpeg" alt="product-img" /></a>
-          <!-- <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-second" src="assets/images/222.jpg" alt="product-img" /></a> -->
-        </div>
-        <div class="product-hover-overlay">
-          <a href="#"><i class="tf-ion-android-cart"></i></a>
-          <a href="#"><i class="tf-ion-ios-heart"></i></a>
-            </div>
-        <div class="product-info">
-          <h2 class="product-title h5 mb-0"><a routerLink="/product-single">Stylish dress</a></h2>
-          <span class="price">
-            &#8377; 99.00
-          </span>
-        </div>
-      </div>
-        </div>
-        
-        <div class="col-lg-4 col-12 col-md-6 col-sm-6 mb-5" >
-          <div class="product">
-        <div class="product-wrap">
-          <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-first" src="assets/images/bag1.jpeg" alt="product-img" /></a>
-          <!-- <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-second" src="assets/images/322.jpg" alt="product-img" /></a> -->
-        </div>
-        <span class="onsale">Sale</span>
-        <div class="product-hover-overlay">
-          <a href="#"><i class="tf-ion-android-cart"></i></a>
-          <a href="#"><i class="tf-ion-ios-heart"></i></a>
-            </div>
-        <div class="product-info">
-          <h2 class="product-title h5 mb-0"><a routerLink="/product-single">Official trendy</a></h2>
-          <span class="price">
-            &#8377; 350.00 – &#8377; 355.00
-          </span>
-        </div>
-      </div>
-        </div>
-        
-        <div class="col-lg-4 col-12 col-md-6 col-sm-6 mb-5" >
-          <div class="product">
-        <div class="product-wrap">
-          <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-first" src="assets/images/img4.jpg" alt="product-img" /></a>
-          <!-- <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-second" src="assets/images/322.jpg" alt="product-img" /></a> -->
-        </div>
-        <span class="onsale">Sale</span>
-        <div class="product-hover-overlay">
-          <a href="#"><i class="tf-ion-android-cart"></i></a>
-          <a href="#"><i class="tf-ion-ios-heart"></i></a>
-            </div>
-        <div class="product-info">
-          <h2 class="product-title h5 mb-0"><a routerLink="/product-single">Official trendy</a></h2>
-          <span class="price">
-            &#8377;350.00 – &#8377; 355.00
-          </span>
-        </div>
-      </div>
-        </div>
+    <div class="product-info">
+      <h2 class="product-title h5 mb-0"><a routerLink="/product-single">{{product.name}}</a></h2>
+      <span class="price">
+        {{product.price | currency :'INR'}}
+      </span>
+    </div>
+  </div>
+    </div>
 
-        
-        <div class="col-lg-4 col-12 col-md-6 col-sm-6 mb-5" >
-          <div class="product">
-        <div class="product-wrap">
-          <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-first" src="assets/images/shoes15.jpeg" alt="product-img" /></a>
-          <!-- <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-second" src="assets/images/322.jpg" alt="product-img" /></a> -->
-        </div>
-        <span class="onsale">Sale</span>
-        <div class="product-hover-overlay">
-          <a href="#"><i class="tf-ion-android-cart"></i></a>
-          <a href="#"><i class="tf-ion-ios-heart"></i></a>
-            </div>
-        <div class="product-info">
-          <h2 class="product-title h5 mb-0"><a routerLink="/product-single">Official trendy</a></h2>
-          <span class="price">
-            &#8377; 350.00 – &#8377; 355.00
-          </span>
-        </div>
-      </div>
-        </div>
-
-        
-      
-     
             <div class="col-12">
               <nav aria-label="Page navigation">
                 <ul class="pagination">
                   <li class="page-item">
-                    <a class="page-link" routerLink="/shop3" aria-label="Previous">
+                    <a class="page-link" routerLink="/shop" aria-label="Previous">
                       <span aria-hidden="true">&laquo;</span>
                     </a>
-                  </li>
-                  <li class="page-item active"><a class="page-link">1</a></li>
-                  <li class="page-item " ><a class="page-link" routerLink="/shop2">2</a></li>
-                  <li class="page-item"><a class="page-link" routerLink="/shop3">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" routerLink="/shop2" aria-label="Next">
-                      <span aria-hidden="true">&raquo;</span>
+                    <li class="page-item" [ngClass]="{'active':tabIndex ===0}" (click)="onTabClick(0)"  (click)="Data1()"><a class="page-link">1</a></li>
+                    <li class="page-item" [ngClass]="{'active':tabIndex ===1}" (click)="onTabClick(1)" (click)="Data2()">
+                      <a class="page-link" routerLink="/shop" >2</a>
+                    </li>
+                    <li class="page-item" [ngClass]="{'active':tabIndex ===2}" (click)="onTabClick(2)" (click)="Data3()">
+                      <a class="page-link" routerLink="/shop">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" routerLink="/shop" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
                     </a>
                   </li>
                 </ul>
               </nav>
             </div>
-          </div>        
-        </div>
-        <div class="col-md-3">
-      
+          </div>      
+          
+          
+          <div class="row" *ngIf="Page2">
+            <div class="col-lg-4 col-12 col-md-6 col-sm-6 mb-5" *ngFor="let product of productList2" >
+        <div class="product">
+      <div class="product-wrap">
+        <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-first" src={{product.imageUrl}} alt="product-img" /></a>
+      </div>
+      <!-- <span class="onsale">Sale</span> -->
+      <div class="product-hover-overlay">
+        <a href="#"><i class="tf-ion-android-cart"></i></a>
+        <a href="#"><i class="tf-ion-ios-heart"></i></a>
+          </div>
+      <div class="product-info">
+        <h2 class="product-title h5 mb-0"><a routerLink="/product-single">{{product.name}}</a></h2>
+        <span class="price">
+          {{product.price | currency :'INR'}}
+        </span>
+      </div>
+    </div>
+      </div>
   
+              <div class="col-12">
+                <nav aria-label="Page navigation">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" routerLink="/shop" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                      <li class="page-item" [ngClass]="{'active':tabIndex ===0}" (click)="onTabClick(0)" (click)="Data1()"  ><a class="page-link">1</a></li>
+                      <li class="page-item" [ngClass]="{'active':tabIndex ===1}" (click)="onTabClick(1)" (click)="Data2()" >
+                        <a class="page-link" routerLink="/shop" >2</a>
+                      </li>
+                      <li class="page-item" [ngClass]="{'active':tabIndex ===2}" (click)="onTabClick(2)" (click)="Data3()" >
+                        <a class="page-link" routerLink="/shop">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" routerLink="/shop" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>      
+
+                     
+          <div class="row" *ngIf="Page3">
+            <div class="col-lg-4 col-12 col-md-6 col-sm-6 mb-5" *ngFor="let product of productList3" >
+        <div class="product">
+      <div class="product-wrap">
+        <a routerLink="/product-single"><img class="img-fluid w-100 mb-3 img-first" src={{product.imageUrl}} alt="product-img" /></a>
+      </div>
+      <!-- <span class="onsale">Sale</span> -->
+      <div class="product-hover-overlay">
+        <a href="#"><i class="tf-ion-android-cart"></i></a>
+        <a href="#"><i class="tf-ion-ios-heart"></i></a>
+          </div>
+      <div class="product-info">
+        <h2 class="product-title h5 mb-0"><a routerLink="/product-single">{{product.name}}</a></h2>
+        <span class="price">
+          {{product.price | currency :'INR'}}
+        </span>
+      </div>
+    </div>
+      </div>
+  
+              <div class="col-12">
+                <nav aria-label="Page navigation">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" routerLink="/shop" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                      <li class="page-item" [ngClass]="{'active':tabIndex ===0}" (click)="onTabClick(0)"(click)="Data1()" ><a class="page-link">1</a></li>
+                      <li class="page-item" [ngClass]="{'active':tabIndex ===1}" (click)="onTabClick(1)"(click)="Data2()">
+                        <a class="page-link" routerLink="/shop" >2</a>
+                      </li>
+                      <li class="page-item" [ngClass]="{'active':tabIndex ===2}" (click)="onTabClick(2)" (click)="Data3()">
+                        <a class="page-link" routerLink="/shop">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" routerLink="/shop" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>      
+
+
+
+
+
         </div>
       </div>
     </div>
