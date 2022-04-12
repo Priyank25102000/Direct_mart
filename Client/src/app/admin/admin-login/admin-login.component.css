@@ -1,0 +1,55 @@
+.btn {
+  background-color: rgb(126, 179, 223);
+  border: 1px solid rgb(19, 19, 109);
+}
+.btn:hover{
+      background-color: rgb(18, 101, 156) !important;
+      color: white;
+      -webkit-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      transition: all 0.4s;
+    }
+
+    .float-right {
+      float: right!important;
+  }
+
+    a, a:focus, a:hover {
+      text-decoration: none;
+      outline: 0;
+      color: blue;
+    }
+input[type=text] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      font-size: large;
+    }  
+div.container {
+      border-radius: 30px;
+     
+      background-color: rgb(170, 216, 245);
+      padding: 20px;
+      font-size: large;
+      
+    } 
+.text-center.heading{
+  background-color: rgb(18, 101, 156);
+}
+
+.inner{
+  background-color: rgb(243, 239, 234);
+  border-radius: 20px;
+}
+
+.mb-2{
+  background-color: rgb(170, 216, 245);
+  border-radius: 20px;
+}
+
+.form-control{
+  border: 1px solid #cad0d7;
+  border-radius: 10px;
+}
+

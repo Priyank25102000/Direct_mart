@@ -1,0 +1,78 @@
+
+
+<app-header></app-header>
+
+<div class="container">
+    <!-- <div *ngIf="cartItems.length == 0" class="alert alert-info">Your cart is empty.</div> -->
+  <div class="row">
+
+      <aside class="col-lg-9">
+          <div class="card">
+              <div class="table-responsive">
+                  <table class="table table-borderless table-shopping-cart" *ngFor="let item of product;let i =index">
+     
+                      <thead class="text-muted">
+                          <tr class="small text-uppercase">
+                              <th scope="col">Product</th>
+                              <th scope="col" width="120" style="text-align: center;">Quantity</th>
+                              <th scope="col" width="120">Price</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>
+                                  <figure class="itemside align-items-center">
+                                      <div class="aside"><img src="{{item.image}}" class="img-sm"></div>
+                                      <figcaption class="info"> <a href="#" class="title text-dark" data-abc="true">{{item.title}}</a>
+                                          <p class="text-muted small">SIZE: L <br> Brand: MAXTRA</p>
+                                      </figcaption>
+                                  </figure>
+                              </td>
+                              <td >
+                                <ul id="qty1">
+                                    <li class="def-number-input number-input d-flex justify-content-center" >
+                                        <button class="btn-minus" (click)="dec(item)" ><i class="fa fa-minus"></i></button>
+                                        <input id="qty" type="number" value="{{item.quantity}}" min="1" > 
+                                        <button class="btn-plus"  (click)="inc(item)" ><i class="fa fa-plus"></i></button>
+
+                                    </li>
+                                 </ul>
+                            </td>
+
+                              <td>
+                                  <div class="price-wrap"> <var class="price"> &#8377;{{item.price}}</var> <small class="text-muted">  &#8377;{{item.price}}</small> </div>
+                                 
+                              </td>
+                              <td> <i class="material-icons" type="button" (click)="removeitem(item)">delete</i>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </aside>
+      <aside class="col-lg-3">
+      
+         
+          <div class="card"  >
+              <div class="card-body">
+                  <dl class="dlist-align">
+                      <dt>Total price:</dt>
+                      <dd class="text-right ml-3"> &#8377;{{grandtotal}}</dd>
+                  </dl>
+
+                  <dl class="dlist-align">
+                      <dt>Total:</dt>
+                      <dd class="text-right text-dark b ml-3"><strong> &#8377;{{grandtotal}}</strong></dd>
+                  </dl>
+                  <hr> <a routerLink="/purchase" class="btn btn-out btn-primary btn-square btn-main" data-abc="true"> Make Purchase </a> 
+                  <a routerLink="/home" class="btn btn-out btn-success btn-square btn-main mt-2" data-abc="true">Continue Shopping</a>
+              </div>
+          </div>
+      </aside>
+  </div>
+</div>
+
+
+
+<app-footer></app-footer>

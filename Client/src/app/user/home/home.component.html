@@ -1,0 +1,240 @@
+<app-header></app-header>
+<ngx-slick-carousel class="main-slider slider"   [config]="slideConfig" *ngIf="!searchKey">
+  <div ngxSlickItem class="slider-item " style="background-image:url('assets/images/slideshow1-2.jpg')">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-12 offset-lg-6 offset-md-6">
+          <div class="slider-caption">
+            <span class="lead">Winter Collection Sale </span>
+            <h1 class="mt-2 mb-5" id="everything"><span class="text-color">70% off </span>to everything</h1>
+            <a routerLink="/shop" class="btn btn-main">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div ngxSlickItem  class="slider-item" style="background-image:url('assets/images/slideshow1-3.jpg')">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-12 offset-lg-6 offset-md-6">
+          <div class="slider-caption">
+            <span class="lead" style="color: white;">up to 70% off</span>
+            <h1 class="mt-2 mb-5" id="clasic-style"><span class="text-color">Classic</span> Style</h1>
+            <a routerLink="/shop2" class="btn btn-main">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div ngxSlickItem  class="slider-item" style="background-image:url('assets/images/slideshow1-1.jpg'); background-position:50%;background-repeat:no-repeat;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-12 offset-lg-6 offset-md-6">
+          <div class="slider-caption">
+            <span class="lead" style="color: white;" >Trendy dress</span>
+            <h1 class="mt-2 mb-5" id="winter"><span class="text-color" >Winter </span>Collection</h1>
+            <a routerLink="/shop3" class="btn btn-main">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </ngx-slick-carousel> 
+<!-- 
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let item of productlist | filter :searchKey :'title'">
+      <div class="card col-md-3">
+        <img src="{{item.image}}" alt="">
+        <h5 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100ch;">{{item.title}}</h5>
+        <p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100ch;">{{item.discription}}</p>
+        <p><strong>price : &#8377; </strong>{{item.price}}</p>
+        <button class="btn btn-primary" (click)="addtocart(item)">add to cart </button>
+      </div>
+    </ng-container>  
+  </div>
+</div> -->
+
+<section class="category section pt-3 pb-0">
+  <div class="container" *ngIf="!searchKey">
+    <div class="row">
+      <div class="col-lg-4 col-sm-12 col-md-6">
+        <div class="cat-item mb-4 mb-lg-0">
+          <img src="assets/images/cat-1.jpg" alt="" class="img-fluid">
+          <div class="item-info">
+            <p class="mb-0">Stylish Leather watch</p>
+            <h4 class="mb-4">up to <strong>50% </strong>off</h4>
+            <a class="read-more" (click)="Data1()">Shop now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-12 col-md-6">
+        <div class="cat-item mb-4 mb-lg-0">
+          <img src="assets/images/cat-2.jpg" alt="" class="img-fluid">
+          <div class="item-info">
+            <p class="mb-0">Ladies hand bag</p>
+            <h4 class="mb-4">up to <strong>40% </strong>off</h4>
+            <a  class="read-more" (click)="Data2()">Shop now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-12 col-md-6">
+        <div class="cat-item">
+          <img src="assets/images/cat-3.jpg" alt="" class="img-fluid">
+          <div class="item-info">
+            <p class="mb-0">Trendy shoe</p>
+            <h4 class="mb-4">up to <strong>50% </strong>off</h4>
+            <a  class="read-more" (click)="Data3()">Shop now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="container" *ngIf="products">
+  <div class="row justify-content-center">
+      <div class="col-lg-8" id="p-title" *ngIf="!searchKey">
+          <div class="title text-center">
+              <h2>New arrivals</h2>
+              <p>The best Online sales to shop these weekend</p>
+          </div>
+      </div>
+  </div>
+
+<div class="row"  >
+  <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5" *ngFor="let item of productlist | filter :searchKey :'title'" >
+      <div class="product" >
+        <div class="product-wrap">
+            <img  img class="img-fluid1 w-100 mb-3 img-first" src={{item.image}} alt="product-img">
+        </div>
+  
+        <!-- <span class="onsale">Sale</span> -->
+        <div class="product-hover-overlay">
+            <a (click)="addtocart(item)"id="cbtn"><i class="tf-ion-android-cart"></i></a>
+            <a href="#"><i class="tf-ion-ios-heart"></i></a>
+          </div>
+  
+        <div class="product-info">
+            <h2 class="product-title h5 mb-0"><a routerLink="/product-single">{{item.title}}</a></h2>
+            <span class="price">
+               {{item.price | currency:'INR'}}
+            </span>
+        </div>
+    </div>
+  </div>
+  </div>
+  
+</div>
+
+<section class="section products-main p-b" >
+  <div class="container" *ngIf="bags">
+    <div class="row justify-content-center">
+        <div class="col-lg-8" id="b-title" *ngIf="!searchKey">
+            <div class="b-title text-center">
+                <h2>Bags</h2>
+                <p>The best Online sales to shop these weekend</p>
+            </div>
+        </div>
+    </div>
+  <div class="container">
+<div class="row" >
+  <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5" *ngFor="let bags of baglist | filter :searchKey :'title'">
+      <div class="product">
+          <div class="product-wrap">
+              <a href="#"><img class="img-fluid w-100 mb-3 watch-images" src={{bags.image}} alt="product-img" /></a>
+          </div>
+
+          <div class="product-hover-overlay">
+              <a (click)="addtocart(bags)"id="cbtn"><i class="tf-ion-android-cart"></i></a>
+              <a href="#"><i class="tf-ion-ios-heart"></i></a>
+            </div>
+
+          <div class="product-info">
+              <h2 class="product-title h5 mb-0"><a href="#">{{bags.title}}</a></h2>
+              <span class="price">
+                {{bags.price | currency:'INR'}}
+              </span>
+          </div>
+      </div>
+    </div>
+</div>
+  </div>
+  </div>
+
+  <section class="section products-main p-s" >
+    <div class="container" *ngIf="shoes">
+      <div class="row justify-content-center">
+          <div class="col-lg-8" id="b-title" *ngIf="!searchKey">
+              <div class="b-title text-center">
+                  <h2>Shoes</h2>
+                  <p>The best Online sales to shop these weekend</p>
+              </div>
+          </div>
+      </div>
+    <div class="container">
+  <div class="row" >
+    <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5" *ngFor="let shoes of shoeslist | filter :searchKey :'title'">
+        <div class="product">
+            <div class="product-wrap">
+                <a href="#"><img class="img-fluid w-100 mb-3 watch-images" src={{shoes.image}} alt="product-img" /></a>
+            </div>
+  
+            <div class="product-hover-overlay">
+                <a (click)="addtocart(shoes)"id="cbtn"><i class="tf-ion-android-cart"></i></a>
+                <a href="#"><i class="tf-ion-ios-heart"></i></a>
+              </div>
+  
+            <div class="product-info">
+                <h2 class="product-title h5 mb-0"><a href="#">{{shoes.title}}</a></h2>
+                <span class="price">
+                  {{shoes.price | currency:'INR'}}
+                </span>
+            </div>
+        </div>
+      </div>
+  </div>
+    </div>
+    </div>
+
+    <section class="section products-main p-m" >
+      <div class="container" *ngIf="watches">
+        <div class="row justify-content-center">
+            <div class="col-lg-8" id="b-title" *ngIf="!searchKey">
+                <div class="b-title text-center">
+                    <h2>watches</h2>
+                    <p>The best Online sales to shop these weekend</p>
+                </div>
+            </div>
+        </div>
+      <div class="container">
+    <div class="row" >
+      <div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5" *ngFor="let watches of watcheslist | filter :searchKey :'title'">
+          <div class="product">
+              <div class="product-wrap">
+                  <a href="#"><img class="img-fluid w-100 mb-3 watch-images" src={{watches.image}} alt="product-img" /></a>
+              </div>
+    
+              <div class="product-hover-overlay">
+                  <a (click)="addtocart(watches)"id="cbtn"><i class="tf-ion-android-cart"></i></a>
+                  <a href="#"><i class="tf-ion-ios-heart"></i></a>
+                </div>
+    
+              <div class="product-info">
+                  <h2 class="product-title h5 mb-0"><a href="#">{{watches.title}}</a></h2>
+                  <span class="price">
+                    {{watches.price | currency:'INR'}}
+                  </span>
+              </div>
+          </div>
+        </div>
+    </div>
+      </div>
+      </div>
+
+  </section>  
+
+</section>
+</section>
+
+<app-footer></app-footer>

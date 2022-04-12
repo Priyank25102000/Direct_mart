@@ -1,0 +1,459 @@
+{
+  "posts": [],
+  "users": [
+    {
+      "id": 1,
+      "title": "HP Laptops",
+      "price": 1000,
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "category": "men's clothing",
+      "image": "assets/images/111.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": 2,
+      "title": "cover ",
+      "price": 1099,
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "category": "men's clothing",
+      "image": "assets/images/222.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": 3,
+      "title": "lages ",
+      "price": 1099,
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "category": "men's clothing",
+      "image": "/assets/images/img4.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": 4,
+      "title": "cooper",
+      "price": 999,
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "category": "men's clothing",
+      "image": "assets/images/watch-1.jpeg",
+      "rating": {
+        "rate": 5,
+        "count": 120
+      }
+    },
+    {
+      "id": 5,
+      "title": "tv",
+      "price": 599,
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "category": "men's clothing",
+      "image": "assets/images/men-1.jpg",
+      "rating": {
+        "rate": 5,
+        "count": 120
+      }
+    },
+    {
+      "id": 6,
+      "title": " Foldsack  Backpack, ",
+      "price": 999,
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "category": "men's clothing",
+      "image": "assets/images/img2.jpg",
+      "rating": {
+        "rate": 5,
+        "count": 120
+      }
+    },
+    {
+      "id": 7,
+      "title": " shoes",
+      "price": 999,
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "category": "men's clothing",
+      "image": "assets/images/sh3.jpg",
+      "rating": {
+        "rate": 5,
+        "count": 120
+      }
+    },
+    {
+      "id": 8,
+      "title": " Laptops",
+      "price": 899,
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "category": "men's clothing",
+      "image": "assets/images/watch-2.jpeg",
+      "rating": {
+        "rate": 5,
+        "count": 120
+      }
+    },
+    {
+      "id": 9,
+      "title": "high heel",
+      "price": 199,
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "category": "men's clothing",
+      "image": "assets/images/img8.jpg",
+      "rating": {
+        "rate": 5,
+        "count": 120
+      }
+    },
+    {
+      "id": 10,
+      "title": "smart watch",
+      "price": 499,
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "category": "men's clothing",
+      "image": "assets/images/shoes10.jpeg",
+      "rating": {
+        "rate": 5,
+        "count": 120
+      }
+    }
+  ],
+  "bag": [
+    {
+      "id": 1,
+      "title": "Lavie ",
+      "price": 1500,
+      "description": " Women's Extra Large Nallon Tote Bag | Ladies Purse Handbag",
+      "category": "Bag",
+      "image": "assets/images/bag2.jpeg",
+      "rating": {
+        "rate": 4.5,
+        "count": 120
+      }
+    },
+    {
+      "id": 2,
+      "title": "Lino Perros",
+      "price": 1500,
+      "description": "Lino Perros Faux Leather Handbag",
+      "category": "Bag",
+      "image": "assets/images/bag1.jpeg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": 3,
+      "title": "Baggit ",
+      "price": 1200,
+      "description": "Baggit Women's Sling Bag",
+      "category": "Bag",
+      "image": "assets/images/bag3.jpeg",
+      "rating": {
+        "rate": 3.7,
+        "count": 120
+      }
+    },
+    {
+      "id": 4,
+      "title": "Caprese",
+      "price": 1800,
+      "description": "Women's Extra Large Nallon Tote Bag | Ladies Purse Handbag",
+      "category": "Bag",
+      "image": "assets/images/bag8.jpeg",
+      "rating": {
+        "rate": 3.5,
+        "count": 120
+      }
+    },
+    {
+      "id": 5,
+      "title": "Hidesign",
+      "price": 5000,
+      "description": "LHidesign Faux Leather Handbag",
+      "category": "Bag",
+      "image": "assets/images/bag10.jpeg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": 6,
+      "title": "Caprese",
+      "price": 2000,
+      "description": "Caprese Women's Sling Bag",
+      "category": "Bag",
+      "image": "assets/images/bag5.jpeg",
+      "rating": {
+        "rate": 3.6,
+        "count": 120
+      }
+    },
+    {
+      "id": 7,
+      "title": "Baggit",
+      "price": 1100,
+      "description": "Women's Extra Large Nallon Tote Bag | Ladies Purse Handbag",
+      "category": "Bag",
+      "image": "assets/images/bag7.jpeg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": 8,
+      "title": "Lino Perros",
+      "price": 2500,
+      "description": "Lino Perros Faux Leather Handbag",
+      "category": "Bag",
+      "image": "assets/images/bag11.jpeg",
+      "rating": {
+        "rate": 4,
+        "count": 120
+      }
+    },
+    {
+      "id": 9,
+      "title": "Lavie",
+      "price": 8000,
+      "description": "Lavie's Women's Sling Bag",
+      "category": "Bag",
+      "image": "assets/images/bag12.jpeg",
+      "rating": {
+        "rate": 4.2,
+        "count": 120
+      }
+    }
+  ],
+  "shoe": [
+    {
+      "id": 1,
+      "title": "Adda",
+      "price": 10000,
+      "description": "Oxygen-01 Running Shoes for Boys",
+      "category": "Shoe",
+      "image": "assets/images/shoes2.jpg",
+      "rating": {
+        "rate": 4.7,
+        "count": 120
+      }
+    },
+    {
+      "id": 2,
+      "title": "Nike",
+      "price": 12000,
+      "description": "Nike Men Lunar Apparent Running Shoes",
+      "category": "Shoe",
+      "image": "assets/images/sh3.jpg",
+      "rating": {
+        "rate": 4.8,
+        "count": 120
+      }
+    },
+    {
+      "id": 3,
+      "title": "Adidas",
+      "price": 6000,
+      "description": "Marc Loire Women's Formal Block Heel Pump Shoes for Office, Party and Formal Occasions.",
+      "category": "Shoe",
+      "image": "assets/images/shoes11.jpeg",
+      "rating": {
+        "rate": 4.4,
+        "count": 120
+      }
+    },
+    {
+      "id": 4,
+      "title": "Bata",
+      "price": 12000,
+      "description": "BATA Foot Thrill Men's Lace Up Sports & Outdoor Running Shoes",
+      "category": "Shoe",
+      "image": "assets/images/shoes4.jpeg",
+      "rating": {
+        "rate": 4.5,
+        "count": 120
+      }
+    },
+    {
+      "id": 5,
+      "title": "Puma",
+      "price": 2000,
+      "description": "Block Heel Sandal for Girls/Women ",
+      "category": "Shoe",
+      "image": "assets/images/shoes8.png",
+      "rating": {
+        "rate": 4.2,
+        "count": 120
+      }
+    },
+    {
+      "id": 6,
+      "title": "Reebok",
+      "price": 10000,
+      "description": "Reebok Men's Energy Runner Lp FLAGRE/Conavy/None Running Shoe",
+      "category": "Shoe",
+      "image": "assets/images/shoes15.jpeg",
+      "rating": {
+        "rate": 4.6,
+        "count": 120
+      }
+    },
+    {
+      "id": 7,
+      "title": "Liberty",
+      "price": 12000,
+      "description": "Liberty Women's Heel sandals | Stylish Fancy and comfort Trending Heel",
+      "category": "Shoe",
+      "image": "assets/images/shoes13.jpeg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": 8,
+      "title": "Woodland",
+      "price": 8000,
+      "description": "Woodland Men's Leather Espadrille Flats",
+      "category": "Shoe",
+      "image": "assets/images/shoes14.jpeg",
+      "rating": {
+        "rate": 4.5,
+        "count": 120
+      }
+    },
+    {
+      "id": 9,
+      "title": "Puma",
+      "price": 1000,
+      "description": "Women's Solid Platform Heels",
+      "category": "Shoe",
+      "image": "assets/images/shoes10.jpeg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    }
+  ],
+  "watch": [
+    {
+      "id": 1,
+      "title": "Apple",
+      "price": 25000,
+      "description": "ColorFit Ultra Smart Watch with 1.75 HD Display, Aluminium Alloy Body, 60 Sports Modes, Spo2, Lightweight, Stock Market Info, Calls & SMS Reply",
+      "category": "Watch",
+      "image": "assets/images/watch7.jpeg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": 2,
+      "title": "Rolex",
+      "price": 18000,
+      "description": "On Time Octus Analog Men's Watch MT-110 TO113 (Multicolor Dial Black Colored Strap)",
+      "category": "Watch",
+      "image": "assets/images/watch15.jpeg",
+      "rating": {
+        "rate": 3.7,
+        "count": 120
+      }
+    },
+    {
+      "id": 3,
+      "title": "Rado",
+      "price": 20000,
+      "description": "Watch Movement Type: Quartz, Watch Display Type: Analog Case Material: Brass, Case Diameter: 40 millimeters ,Water Resistance Depth: 30 meters",
+      "category": "Watch",
+      "image": "assets/images/watch1.jpg",
+      "rating": {
+        "rate": 4.6,
+        "count": 120
+      }
+    },
+    {
+      "id": 4,
+      "title": "Timex",
+      "price": 2800,
+      "description": "ColorFit Ultra Smart Watch with 1.75 HD Display, Aluminium Alloy Body, 60 Sports Modes, Spo2, Lightweight, Stock Market Info, Calls & SMS Reply",
+      "category": "Watch",
+      "image": "assets/images/watch10.jpeg",
+      "rating": {
+        "rate": 3.8,
+        "count": 120
+      }
+    },
+    {
+      "id": 5,
+      "title": "Swatch",
+      "price": 20000,
+      "description": "On Time Octus Analog Men's Watch MT-110 TO113 (Multicolor Dial Black Colored Strap)",
+      "category": "Watch",
+      "image": "assets/images/watch5.jpeg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": 6,
+      "title": "MI",
+      "price": 2000,
+      "description": "Watch Movement Type: Quartz, Watch Display Type: Analog Case Material: Brass, Case Diameter: 40 millimeters ,Water Resistance Depth: 30 meters",
+      "category": "Watch",
+      "image": "assets/images/watch4.jpg",
+      "rating": {
+        "rate": 4,
+        "count": 120
+      }
+    },
+    {
+      "id": 7,
+      "title": "Citizen",
+      "price": 3000,
+      "description": "ColorFit Ultra Smart Watch with 1.75 HD Display, Aluminium Alloy Body, 60 Sports Modes, Spo2, Lightweight, Stock Market Info, Calls & SMS Reply",
+      "category": "Watch",
+      "image": "assets/images/watch-1.jpeg",
+      "rating": {
+        "rate": 3.6,
+        "count": 120
+      }
+    },
+    {
+      "id": 8,
+      "title": "Samsung",
+      "price": 15000,
+      "description": "On Time Octus Analog Men's Watch MT-110 TO113 (Multicolor Dial Black Colored Strap)",
+      "category": "Watch",
+      "image": "assets/images/watch13.jpeg",
+      "rating": {
+        "rate": 3.5,
+        "count": 120
+      }
+    },
+    {
+      "id": 9,
+      "title": "Fossil",
+      "price": 8000,
+      "description": "Watch Movement Type: Quartz, Watch Display Type: Analog Case Material: Brass, Case Diameter: 40 millimeters ,Water Resistance Depth: 30 meters",
+      "category": "Watch",
+      "image": "assets/images/watch-3.png",
+      "rating": {
+        "rate": 3.8,
+        "count": 120
+      }
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
