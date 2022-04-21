@@ -48,6 +48,7 @@ export class AdminLoginComponent  {
         this.msg = 'Invalid email or password'
       }
     }
+    
 }
 
 

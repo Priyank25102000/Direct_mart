@@ -63,6 +63,7 @@ body {
 	transition: .3s ease;
 	overflow-x: hidden;
 	scrollbar-width: none;
+
 }
 #sidebar::--webkit-scrollbar {
 	display: none;
@@ -590,3 +591,91 @@ body {
 		min-width: 420px;
 	}
 }
+
+/* .btn-info{
+	position: absolute;
+	right: 102px;
+	
+
+} */
+
+
+.modal-footer{
+	border-top: 0px;
+	
+
+	
+}
+input[type=text] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	font-size: large;
+	background-color: lightgray;
+	border-radius: 10px;
+	
+  } 
+
+
+  #exampleInputimage{
+	width: 100%;
+	padding: 7px 12px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	font-size: large;
+	background-color: lightgray;
+	border-radius: 10px;
+  }
+  
+  
+  .modal-content{
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	font-size: large; 
+	left: 400px;
+	margin-top: 150px;
+	background-color:whitesmoke;
+	
+	
+	
+  }
+  .modal-title{
+	  
+	  font-size: large;
+	  padding-left: 150px;
+	  font-weight: 500;
+  }
+  #btn1{
+	  text-align: center;
+	  border-radius: 5px;
+	  background-color: #3C91E6;
+  }
+  #btn2{
+	text-align: center;
+	border-radius: 5px;
+	background-color: rgb(36, 206, 192);
+}
+#btn3{
+	text-align: center;
+	border-radius: 5px;
+	
+}
+.p-img{
+	height: 100px;
+	width: 100px;
+}
+
+#edit-1{
+	border-radius: 5px;
+}
+#delete-1{
+	border-radius: 5px;
+
+}
+
+  
+  
+  

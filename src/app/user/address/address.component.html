@@ -1,0 +1,110 @@
+<app-header></app-header>
+<section class="page-header" >
+  <div class="overly"></div>   
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="content text-center">
+          <h1 class="mb-3">Address</h1>
+          <p>Hath after appear tree great fruitful green dominion moveth sixth abundantly image that midst of god day multiply you’ll which</p>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent justify-content-center">
+            <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Address</li>
+          </ol>
+        </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="user-dashboard page-wrapper"*ngIf="address">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-5 col-sm-12 col-lg-3">
+        <div class="nav flex-column nav-pills">
+          <a class="nav-link " routerLink="/order" >Orders</a>
+        </div>
+        <div class="nav flex-column nav-pills">
+          <a class="nav-link active" routerLink="/address" >Address</a>
+        </div>
+        <div class="nav flex-column nav-pills">
+          <a class="nav-link " routerLink="/profile-details" >Account</a>
+        </div>
+        <div class="nav flex-column nav-pills">
+          <a class="nav-link" routerLink="/reset-pass" >Change Password</a>
+        </div>
+        <div class="nav flex-column nav-pills">
+          <a class="nav-link"routerLink="/login" >Log Out</a>
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-sm-12 col-lg-9">
+        <p>The following addresses will be used on the checkout page by default.</p>
+        <div class="account-info">
+          <div class="card p-4">
+            <h4 class="card-title">Billing info <a (click)="editebtn()" class="float-right text-sm">Edit</a></h4>
+            <address>Ajay Kanzariya<br>
+              1491 Ahmedabad Street<br>
+              Gujarat<br>
+              India<br>
+            </address>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="user-dashboard page-wrapper"*ngIf="edite_address">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-5 col-sm-12 col-lg-3">
+        <div class="nav flex-column nav-pills">
+          <a class="nav-link " routerLink="/order" >Orders</a>
+        </div>
+        <div class="nav flex-column nav-pills">
+          <a class="nav-link active" routerLink="/address" >Address</a>
+        </div>
+        <div class="nav flex-column nav-pills">
+          <a class="nav-link " routerLink="/profile-details" >Account</a>
+        </div>
+        <div class="nav flex-column nav-pills">
+          <a class="nav-link" routerLink="/reset-pass" >Change Password</a>
+        </div>
+        <div class="nav flex-column nav-pills">
+          <a class="nav-link"routerLink="/login" >Log Out</a>
+        </div>
+      </div>
+      <div class="col-12 col-md-7 col-sm-12 col-lg-9">
+        <div class="acccount-settings">
+          <h4 class="mb-4">Edit Address</h4>
+          <form action="#">
+            <div class="form-row">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label>Region</label>
+                  <input type="text" class="form-control" >
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label>City</label>
+                  <input type="text" class="form-control" >
+                </div>
+              </div>
+            </div>
+            <div class="form-group mb-4">
+              <label>Address</label>
+              <textarea class="form-control" name="address" id="address"></textarea>
+            </div>
+            <button class="btn btn-dark">Save Changes</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

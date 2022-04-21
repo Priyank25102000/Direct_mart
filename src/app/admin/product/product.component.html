@@ -13,14 +13,11 @@
 </head>
 <body>
 
-
-
-
 	<!-- SIDEBAR -->
 	<section id="sidebar">
 		<a href="#" class="brand">
 			<i class='bx bxs-smile'></i>
-			<span class="text">Admin</span>
+			<span class="text">Direct-Mart Admin</span>
 		</a>
 		<ul class="side-menu top">
 			<li >
@@ -76,7 +73,7 @@
 		<!-- NAVBAR -->
 		<nav>
 			<i class='bx bx-menu' ></i>
-			<a href="#" class="nav-link">Categories</a>
+			<a href="#" class="nav-link"></a>
 			<form action="#">
 				<div class="form-input">
 					<input type="search" placeholder="Search...">
@@ -88,54 +85,91 @@
 				<img src="assets/images/icon.png">
 			</a>
 		</nav>
-		
-		<main>
-            <div class="container">
-                <div class="card-table">
-                    <div class="card-product">
-                        <table class="table table-responsive">
-                            <thead>
-                                <tr>
-                                    <th>Sr.No</th>
-                                    <th>Product Name</th>
-                                    <th>Product Image</th>
-                                    <th>Description</th>
-                                    <th>Price</th>
-                                    <th>Quantity</th> 
-                                    <th>Total</th>
-                                    <th>Order Date</th>
-                                    
-                                </tr>
-                            </thead>
-                            <tbody>	
-                                <tr>
-                                    <td>id</td>
-                                    <td>title</td>
-                                    <td>img</td>
-                                    <td>description</td>
-                                    <td>price</td>
-                                    <td>quantity</td>
-                                    <td>total</td>
-                                    <td>order date</td> 
-                                      
-                                           
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-              </div>
-            
-        </main>
+		<button type="button"  data-toggle="modal" data-target="#exampleModalLong" class="btn btn-btn btn-info float-right ">Add product</button>
+		<div class="container">
+			<div class="card-table">
+				<div class="card-product">
+					<table class="table table-responsive">
+						<thead>
+							<tr>
+								<th>No</th>
+								<th>product name</th>												
+								<th>price</th>
+								<th>description</th> 
+								<th>image</th> 
+								<th>action</th>								
+							</tr>
+						</thead>
+						<tbody>
 
+							<tr *ngFor="let row of productdata">
+								<td>{{row.id}}</td>
+								<td>{{row.productName}}</td>
+								<td>{{row.productPrice}}</td>
+								<td>{{row.productDescription}}</td>				
+								<td><img class="p-img" src="{{url}}" ></td>
 
+								
+								<td><button (click)="onedit(row)" type="button" id="edit-1" data-toggle="modal" data-target="#exampleModalLong" class="btn btn-primary" >edit</button>
+									<button type="button" (click)="ondeleteproduct(row)" id="delete-1"  class="btn btn-danger mx-3">delete</button></td>          
+							</tr>
+
+						</tbody>
+						
+					</table>
+					
+					<div class="modal fade " id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+						<div class="modal-dialog " role="document" >
+						  <div class="modal-content">
+							<div class="modal-header" style="left: 190px;">
+							  <h5 class="modal-title" id="exampleModalLongTitle">Add Product</h5>
+							  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							  </button>
+							</div>
+
+	<div class="modal-body ">
+   <form [formGroup]="formvalue">
+  <div class="form-group">
+    <label for="exampleInputEmail1">product name</label>
+    <input type="text" formControlName="productName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter product name">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">price</label>
+    <input type="text" formControlName="productPrice" class="form-control" id="exampleInputPassword1"  placeholder="price">
+  </div>
+ 
+ <div class="form-group">
+    <label for="exampleInputEmail1">product description</label>
+    <input type="text" formControlName="productDescription"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter product description">
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleInputEmail1">product image</label>
+    <input type="file" class="form-control" (change)="onselectfile($event)"
+	 id="exampleInputEmail1" formControlName="url"
+	  aria-describedby="emailHelp" placeholder="select product image">
+  </div>
+
+</form>
+							</div>
+							<div class="modal-footer">
+							  
+							  <button type="button" (click)="postproductdetails()" id="btn1" class="btn btn-success">add</button>
+							  <button type="button" (click)="updateproductdetails()" id="btn2" class="btn btn-primary">update</button>
+							  <button type="button" id="btn3" class="btn btn-danger" data-dismiss="modal">Close</button>
+
+							</div>
+						  </div>
+						</div>
+					  </div>  
+				</div>
+			</div>
+			</div>
+		 
         </section>
 
 
-
-<!-- CONTENT -->
-
-
-<script src="script.js"></script>
 </body>
 </html>

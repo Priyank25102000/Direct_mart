@@ -3,34 +3,35 @@ import { BrowserModule } from '@angular/platform-browser';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AdminOrderComponent } from './admin/admin-order/admin-order.component';
-import { AdminPanelComponent } from './admin/admin-panel/admin-panel.component';
-import { FeedbackComponent } from './admin/feedback/feedback.component';
-import { ProductComponent } from './admin/product/product.component';
-import { SellsReturnComponent } from './admin/sells-return/sells-return.component';
-import { HeaderComponent } from './User/header/header.component';
-import { FooterComponent } from './User/footer/footer.component';
-import { HomeComponent } from './User/home/home.component';
-import { ProductsingleComponent } from './User/productsingle/productsingle.component';
-import { CartComponent } from './User/cart/cart.component';
-import { CheckoutComponent } from './User/checkout/checkout.component';
-import { ShopComponent } from './User/shop/shop.component';
-import { OrdersComponent } from './User/orders/orders.component';
-import { LoginComponent } from './User/login/login.component';
-import { SignupComponent } from './User/signup/signup.component';
-import { ForgotPasswordComponent } from './User/forgot-password/forgot-password.component';
-import { ProfileDetailsComponent } from './User/profile-details/profile-details.component';
-import { AddressComponent } from './User/address/address.component';
-import { EditAddressComponent } from './User/edit-address/edit-address.component';
-import { ResetPasswordComponent } from './User/reset-password/reset-password.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ProductCategoriesComponent } from './User/product-categories/product-categories.component';
-import { FilterPipe } from './Pipes/filter.pipe';
-import { PurchaseComponent } from './User/purchase/purchase.component';
-import { AuthGuard } from './User/login/Auth/auth1/auth.guard';
+import { HttpClientModule } from '@angular/common/http';
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
+import { AdminPanelComponent } from './admin/admin-panel/admin-panel.component';
+import { ProductComponent } from './admin/product/product.component';
+import { AdminOrderComponent } from './admin/admin-order/admin-order.component';
+import { FeedbackComponent } from './admin/feedback/feedback.component';
+import { SellsReturnComponent } from './admin/sells-return/sells-return.component';
+import { FilterPipe } from './shared/filter.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterComponent } from './user/footer/footer.component';
+import { HomeComponent } from './user/home/home.component';
+import { ProductsingleComponent } from './user/productsingle/productsingle.component';
+import { CartComponent } from './user/cart/cart.component';
+import { CheckoutComponent } from './user/checkout/checkout.component';
+import { ShopComponent } from './user/shop/shop.component';
+import { OrdersComponent } from './user/orders/orders.component';
+import { LoginComponent } from './user/login/login.component';
+import { AddressComponent } from './user/address/address.component';
+import { SignupComponent } from './user/signup/signup.component';
+import { ForgotPasswordComponent } from './user/forgot-password/forgot-password.component';
+import { ProfileDetailsComponent } from './user/profile-details/profile-details.component';
+import { HeaderComponent } from './user/header/header.component';
+import { AuthGuard } from './user/login/auth1/auth.guard';
 import { AdminauthGuard } from './admin/admin-login/login-auth/adminauth.guard';
-
+import { PurchaseComponent } from './user/purchase/purchase.component';
+import { ResetPasswordComponent } from './user/reset-password/reset-password.component';
+import { TransfereService } from './shared/common.service';
+import { ConfirmComponent } from './user/confirm/confirm.component';
 
 
 
@@ -50,19 +51,20 @@ import { AdminauthGuard } from './admin/admin-login/login-auth/adminauth.guard';
     ForgotPasswordComponent,
     ProfileDetailsComponent,
     AddressComponent,
-    EditAddressComponent,
-    ResetPasswordComponent,
-    AdminLoginComponent,
-    AdminOrderComponent,
-    AdminPanelComponent,
-    FeedbackComponent,
-    ProductComponent,
-    SellsReturnComponent,
-    ProductCategoriesComponent,
-    FilterPipe,
-    PurchaseComponent,
 
 
+     AdminLoginComponent,
+     AdminPanelComponent,
+     ProductComponent,
+     AdminOrderComponent,
+     FeedbackComponent,
+     SellsReturnComponent,
+     FilterPipe,
+     PurchaseComponent,
+     ResetPasswordComponent,
+     ConfirmComponent,
+
+     
 
   ],
   imports: [
@@ -70,10 +72,15 @@ import { AdminauthGuard } from './admin/admin-login/login-auth/adminauth.guard';
     AppRoutingModule,
     SlickCarouselModule,
     ReactiveFormsModule,
+    HttpClientModule,
     FormsModule,
-    BrowserModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+   
+   
+
   ],
-  providers: [AuthGuard,AdminauthGuard],
+  providers: [AuthGuard,AdminauthGuard, TransfereService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
